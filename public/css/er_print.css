@@ -1,0 +1,76 @@
+  /* Modal Print CSS */
+  .image_div h3 {
+    font-weight: 700;
+ }
+.my_break{
+     display: none;
+ }
+@media screen {
+ #printSection {
+     display: none;
+ }
+} 
+
+@media print {
+ table,
+ table tr,
+ table td,
+ table th {
+ border: 1px solid #999;
+ }
+ .close_print {
+     display: none;
+ }
+ .image_div h3 {
+     text-align: center;
+      font-weight: 700;
+      font-size:25px !important;
+ }
+ .modal-content{
+    width:700px !important;
+ }
+ .modal-title{
+     font-size:30px;
+ }
+  /* [class*="col-lg-6"] {
+     float:left;
+     width:50% !important;
+ } */
+ [class*="col-md-6"],[class*="col-lg-6"]{
+     float:left;
+     width:50% !important;
+ }
+ .col-md-12,.col-lg-12{
+     width:100% !important;
+ }
+  p{word-wrap: break-word !important;}
+  #EmpModalLong p{
+    font-weight:400 !important;
+}
+ .my_break{
+     display: block;
+ }
+ table {
+     text-align: center;
+     border-collapse: collapse;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ th,
+ td {
+     padding: 5px;
+ }
+ body * {
+     visibility: hidden;
+ }
+ #printSection,
+ #printSection * {
+     visibility: visible;
+ }
+ #printSection {
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+}
+/* ./Modal Print CSS */
